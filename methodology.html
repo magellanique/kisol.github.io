@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Methodology for the KISoL City Affordability Index.">
+  <title>KISoL - A Standard of Living Index by magellanique.com - Methodology</title>
+  <link rel="stylesheet" href="styles.css?v=20260718-github-ready">
+</head>
+<body class="theme-methodology">
+  <a class="skip-link" href="#main-content">Skip to methodology</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="KISoL - A Standard of Living Index by magellanique.com results">
+        <strong>KISoL</strong>
+        <span>A Standard of Living Index by magellanique.com</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Results</a>
+        <a href="index.html#about-project">About</a>
+        <a href="methodology.html" aria-current="page">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <div class="reading-width">
+        <p class="eyebrow">Methodology</p>
+        <h1>A consistent basket, measured against national or state earning capacity</h1>
+        <p class="lede">The index is designed solely for comparability, not exhaustive household budgeting. It uses products and services that can be matched closely across markets and keeps every modelling decision visible in the source ledger available on request.</p>
+      </div>
+    </section>
+
+    <section class="content-section reading-width" aria-labelledby="coverage-heading">
+      <p class="section-kicker">City coverage</p>
+      <h2 id="coverage-heading">A consistent population-based sample</h2>
+      <p>For each covered European country, KISoL includes the two largest cities by population. The United States is represented by its ten largest cities by population.</p>
+      <p>The main website sample excludes European microstates to reduce structural outliers from unusually small labor, housing, and cross-border markets. Luxembourg remains included, while the full-sample workbook retains the excluded microstates for audit.</p>
+    </section>
+
+    <section class="content-section reading-width" aria-labelledby="framework-heading">
+      <p class="section-kicker">Framework</p>
+      <h2 id="framework-heading">Three related views</h2>
+      <div class="definition-list">
+        <div>
+          <h3>Basket cost</h3>
+          <p>Shows where the standardized collection of prices is cheaper or more expensive. Income and employment do not enter this view.</p>
+        </div>
+        <div>
+          <h3>City affordability</h3>
+          <p>Compares a European national or U.S. state-adjusted net-median earning input, adjusted for the corresponding prime-age employment share, with the same city price basket.</p>
+        </div>
+        <div>
+          <h3>Country and state affordability</h3>
+          <p>Population-weights the sampled city baskets within each European country or U.S. state, then compares the grouped basket with the applicable national or state labor input.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section reading-width" aria-labelledby="aggregation-heading">
+      <p class="section-kicker">Country and state aggregation</p>
+      <h2 id="aggregation-heading">Population weights across the sampled cities</h2>
+      <div class="definition-list">
+        <div>
+          <h3>City population weight</h3>
+          <p>Population of the city divided by the total population of all sampled cities in the same country or U.S. state.</p>
+        </div>
+        <div>
+          <h3>Geography basket</h3>
+          <p>For each price component, sum the city component multiplied by its population weight. Apply the same fixed fuel, housing, and goods weights to those grouped components.</p>
+        </div>
+        <div>
+          <h3>Geography affordability index</h3>
+          <p>Divide applicable income capacity by the population-weighted basket, then rebase that ratio to the median across all countries and states in the grouped sample.</p>
+        </div>
+      </div>
+      <p>Weights sum to 100% within the sampled cities only. A U.S. state represented by one city receives a 100% city weight. The result does not estimate prices for places outside the sampled cities.</p>
+    </section>
+
+    <section class="content-section content-width" aria-labelledby="basket-heading">
+      <div class="reading-width flush-left">
+        <p class="section-kicker">Price basket</p>
+        <h2 id="basket-heading">Comparable, sensible, standardized items</h2>
+        <p>The basket uses fixed categories and fixed internal weights. Product identities are generally described by specification rather than brand.</p>
+      </div>
+      <div class="method-table-shell">
+        <table class="method-table">
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">What is compared</th>
+              <th scope="col">Why it is included</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Road fuel</th>
+              <td>The same commonly purchased grade, converted to a common volume and currency.</td>
+              <td>A standardized, frequently updated proxy for energy- and transport-related cost pressure across local services. It avoids comparing quality-sensitive service quotes while retaining a channel that affects delivery and operating costs.</td>
+            </tr>
+            <tr>
+              <th scope="row">Housing</th>
+              <td>Newly advertised rents and purchase prices per unit of floor area.</td>
+              <td>Measures the price a new entrant faces rather than protected or long-standing incumbent contracts.</td>
+            </tr>
+            <tr>
+              <th scope="row">Basic food</th>
+              <td>A consistent mix of animal protein, staple carbohydrate, vegetable, dairy, and eggs.</td>
+              <td>Covers ordinary nutrition while avoiding cuisine-specific household baskets.</td>
+            </tr>
+            <tr>
+              <th scope="row">Standardized car</th>
+              <td>A Korean-made compact car sold widely with closely comparable quality, observed both new and used.</td>
+              <td>Tests the cost of a globally tradable durable good and local vehicle-market frictions.</td>
+            </tr>
+            <tr>
+              <th scope="row">Consumer technology</th>
+              <td>The same current premium smartphone with the same storage tier.</td>
+              <td>Provides a highly standardized globally traded product with transparent official pricing.</td>
+            </tr>
+            <tr>
+              <th scope="row">Eating out</th>
+              <td>A standardized chicken portion from the same international quick-service chain.</td>
+              <td>Acts as a repeatable proxy for prepared food, labor, commercial rent, and local operating costs.</td>
+            </tr>
+            <tr>
+              <th scope="row">Footwear</th>
+              <td>The same classic white leather sneaker from the same international manufacturer.</td>
+              <td>Adds a standardized apparel product with identical design and quality across markets.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <details id="fuel-service-evidence" class="method-evidence fuel-method-details reading-width flush-left">
+        <summary>
+          <span>Why fuel is used as a quality-consistent service-price proxy</span>
+          <span class="details-hint">Open evidence and audit</span>
+        </summary>
+        <div class="fuel-method-content">
+          <p>Fuel is standardized, local, frequently priced, and difficult to disguise with differences in presentation or service quality. Its retail price combines a common energy input with local taxes, distribution costs, and margins. Energy and transport also enter service production directly and through supply chains. The <a href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2024/html/ecb.ebbox202403_06~bf8222a3ae.en.html">ECB's input-output evidence</a> documents direct and indirect energy costs in service-sector output; <a href="https://ideas.repec.org/a/aea/aecrev/v81y1991i5p1295-309.html">Falvey and Gemmell</a> find that higher tradable prices are associated with higher service prices; and <a href="https://www.cgdev.org/publication/what-determines-purchasing-power-parity-exchange-rates-working-paper-416">Gelb and Diofasi's 168-economy analysis</a> finds that subsidy programmes, measured partly through fuel subsidies, help explain price-level differences beyond income.</p>
+          <p>Quality is costly. Better staff, more time, better premises, better materials, and a credible reputation require resources. <a href="https://www.journals.uchicago.edu/doi/10.1086/260169">Rosen</a> links observed prices to product characteristics. <a href="https://www.journals.uchicago.edu/doi/10.1086/260996">Klein and Leffler</a> show that price premiums can finance and enforce performance when quality is difficult to observe. <a href="https://ideas.repec.org/a/oup/qjecon/v98y1983i4p659-679..html">Shapiro</a> derives an equilibrium price-quality schedule in which high quality commands a premium that pays for reputation. Higher service prices therefore tend to be directionally associated with higher quality, although not mechanically. A fixed fuel grade avoids much of the quality noise in unmatched service quotes.</p>
+
+          <h3>Direct validation with three services</h3>
+          <p>The test uses the 28 European countries shared by all three service datasets. The first measure is the same fixed prepared-food portion from one international quick-service chain. The second is the counter price of an ordinary domestic standard letter using the slower D+X product. The third is the average lowest standard men's haircut price from highly rated central-city salons. Wages, employment, housing, and every other basket component are excluded.</p>
+
+          <div class="proxy-formula" aria-label="Three-service proxy calculation">
+            <p><strong>Prepared-food service:</strong> P<sub>c</sub> = arithmetic mean of sampled city prices in country c, in USD.</p>
+            <p><strong>Postal service:</strong> L<sub>c</sub> = domestic standard-letter counter price in country c, in EUR.</p>
+            <p><strong>Haircut service:</strong> H<sub>c</sub> = arithmetic mean of published source-city haircut prices in country c, in EUR.</p>
+            <p>P<sup>*</sup><sub>c</sub> = P<sub>c</sub> / GM(P), &nbsp; L<sup>*</sup><sub>c</sub> = L<sub>c</sub> / GM(L), &nbsp; H<sup>*</sup><sub>c</sub> = H<sub>c</sub> / GM(H)</p>
+            <p><strong>Combined service proxy:</strong> S<sub>c</sub> = 100 &times; &#8731;(P<sup>*</sup><sub>c</sub> &times; L<sup>*</sup><sub>c</sub> &times; H<sup>*</sup><sub>c</sub>)</p>
+          </div>
+
+          <p>GM is the geometric mean across the 28-country sample. Each service price is divided by its own sample geometric mean, removing differences in currencies and absolute price scales. The three normalized price relatives are then combined geometrically, giving each service equal proportional weight and preventing any one price level from dominating the proxy. Countries are divided at the sample median fuel price of <strong>$7.38 per gallon</strong>.</p>
+
+          <div class="method-table-shell proxy-results-shell">
+            <table class="validation-summary-table">
+              <thead>
+                <tr>
+                  <th scope="col">Fuel-price group</th>
+                  <th scope="col">Countries</th>
+                  <th scope="col">Fuel, USD/gal</th>
+                  <th scope="col">Prepared food, USD</th>
+                  <th scope="col">Letter, EUR</th>
+                  <th scope="col">Haircut, EUR</th>
+                  <th scope="col">Service proxy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">At or below median</th><td>14</td><td>6.84</td><td>4.50</td><td>1.03</td><td>29.09</td><td>85.9</td></tr>
+                <tr><th scope="row">Above median</th><td>14</td><td>8.51</td><td>5.59</td><td>1.58</td><td>46.08</td><td>123.7</td></tr>
+                <tr><th scope="row">Higher versus lower</th><td>--</td><td>+24.5%</td><td>+24.1%</td><td>+53.6%</td><td>+58.4%</td><td><strong>+43.9%</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="method-table-shell proxy-results-shell">
+            <table class="validation-summary-table">
+              <thead>
+                <tr>
+                  <th scope="col">Service measure</th>
+                  <th scope="col">Pearson correlation with fuel</th>
+                  <th scope="col">Spearman correlation with fuel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Prepared-food service</th><td>+0.547</td><td>+0.572</td></tr>
+                <tr><th scope="row">Postal service</th><td>+0.514</td><td>+0.369</td></tr>
+                <tr><th scope="row">Haircut service</th><td>+0.659</td><td>+0.619</td></tr>
+                <tr><th scope="row">Combined service proxy</th><td><strong>+0.636</strong></td><td><strong>+0.596</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="proxy-formula" aria-label="Correlation calculation">
+            <p><strong>Pearson:</strong> r(F,S) = &Sigma;[(F<sub>c</sub> &minus; F&#x0304;)(S<sub>c</sub> &minus; S&#x0304;)] / &radic;[&Sigma;(F<sub>c</sub> &minus; F&#x0304;)<sup>2</sup> &times; &Sigma;(S<sub>c</sub> &minus; S&#x0304;)<sup>2</sup>]</p>
+            <p><strong>Spearman:</strong> apply the same formula to the ranks of fuel and service prices.</p>
+          </div>
+
+          <p>The pattern is consistent across all three services. Countries above the fuel median have a <strong>43.9% higher</strong> combined service proxy. The combined Pearson correlation is <strong>+0.636</strong> and the rank correlation is <strong>+0.596</strong>. Removing the highest-fuel observation still leaves Pearson at <strong>+0.504</strong> and Spearman at <strong>+0.549</strong>.</p>
+
+          <details class="validation-audit">
+            <summary>Show the anonymized 28-country audit table</summary>
+            <p class="audit-note">Letters are stable anonymous labels within each region. They do not affect sorting or calculation.</p>
+            <div class="method-table-shell validation-table-shell">
+              <table class="validation-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Anonymous geography</th>
+                    <th scope="col">Fuel, USD/gal</th>
+                    <th scope="col">Prepared food, USD</th>
+                    <th scope="col">Letter, EUR</th>
+                    <th scope="col">Haircut, EUR</th>
+                    <th scope="col">Service proxy</th>
+                    <th scope="col">Fuel group</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Nordic Country D</th><td>5.86</td><td>5.74</td><td>1.93</td><td>51.79</td><td>142.0</td><td>Lower</td></tr>
+                  <tr><th scope="row">Eastern European Country A</th><td>6.28</td><td>3.91</td><td>0.49</td><td>19.29</td><td>56.9</td><td>Lower</td></tr>
+                  <tr><th scope="row">Southern European Country B</th><td>6.33</td><td>4.81</td><td>0.34</td><td>22.60</td><td>56.9</td><td>Lower</td></tr>
+                  <tr><th scope="row">Central European Country C</th><td>6.76</td><td>4.03</td><td>1.15</td><td>28.40</td><td>86.9</td><td>Lower</td></tr>
+                  <tr><th scope="row">Southern European Country F</th><td>6.79</td><td>4.70</td><td>0.78</td><td>34.18</td><td>85.5</td><td>Lower</td></tr>
+                  <tr><th scope="row">Central European Country E</th><td>6.87</td><td>4.89</td><td>1.20</td><td>22.70</td><td>87.3</td><td>Lower</td></tr>
+                  <tr><th scope="row">Baltic Country C</th><td>6.91</td><td>4.24</td><td>2.00</td><td>35.56</td><td>114.6</td><td>Lower</td></tr>
+                  <tr><th scope="row">Southern European Country A</th><td>6.95</td><td>4.17</td><td>0.65</td><td>19.70</td><td>64.3</td><td>Lower</td></tr>
+                  <tr><th scope="row">Central European Country A</th><td>6.98</td><td>4.36</td><td>1.07</td><td>30.97</td><td>89.6</td><td>Lower</td></tr>
+                  <tr><th scope="row">Central European Country B</th><td>7.01</td><td>3.93</td><td>0.65</td><td>16.82</td><td>59.8</td><td>Lower</td></tr>
+                  <tr><th scope="row">Eastern European Country B</th><td>7.20</td><td>3.68</td><td>1.01</td><td>26.45</td><td>78.9</td><td>Lower</td></tr>
+                  <tr><th scope="row">Central European Country D</th><td>7.23</td><td>4.20</td><td>1.20</td><td>32.70</td><td>93.7</td><td>Lower</td></tr>
+                  <tr><th scope="row">Baltic Country A</th><td>7.28</td><td>4.37</td><td>0.90</td><td>28.40</td><td>82.3</td><td>Lower</td></tr>
+                  <tr><th scope="row">Western European Country F</th><td>7.28</td><td>6.02</td><td>1.00</td><td>37.74</td><td>104.3</td><td>Lower</td></tr>
+                  <tr><th scope="row">Western European Country E</th><td>7.48</td><td>6.09</td><td>1.40</td><td>42.10</td><td>121.4</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country A</th><td>7.62</td><td>5.94</td><td>0.95</td><td>49.25</td><td>111.5</td><td>Higher</td></tr>
+                  <tr><th scope="row">Baltic Country B</th><td>7.68</td><td>4.27</td><td>1.65</td><td>34.10</td><td>106.2</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country B</th><td>7.82</td><td>5.74</td><td>1.53</td><td>38.85</td><td>119.4</td><td>Higher</td></tr>
+                  <tr><th scope="row">Southern European Country D</th><td>8.23</td><td>5.34</td><td>1.25</td><td>32.70</td><td>102.9</td><td>Higher</td></tr>
+                  <tr><th scope="row">Southern European Country E</th><td>8.27</td><td>4.52</td><td>0.65</td><td>30.10</td><td>76.1</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country C</th><td>8.32</td><td>5.42</td><td>1.89</td><td>47.27</td><td>134.2</td><td>Higher</td></tr>
+                  <tr><th scope="row">Nordic Country C</th><td>8.53</td><td>6.27</td><td>2.13</td><td>48.76</td><td>148.1</td><td>Higher</td></tr>
+                  <tr><th scope="row">Southern European Country C</th><td>8.56</td><td>4.38</td><td>1.20</td><td>32.90</td><td>95.2</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country H</th><td>8.66</td><td>6.81</td><td>1.07</td><td>64.90</td><td>133.2</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country D</th><td>8.92</td><td>5.56</td><td>0.95</td><td>59.37</td><td>116.1</td><td>Higher</td></tr>
+                  <tr><th scope="row">Nordic Country B</th><td>9.23</td><td>5.93</td><td>2.50</td><td>43.20</td><td>147.3</td><td>Higher</td></tr>
+                  <tr><th scope="row">Western European Country G</th><td>9.71</td><td>5.68</td><td>1.01</td><td>46.04</td><td>109.6</td><td>Higher</td></tr>
+                  <tr><th scope="row">Nordic Country A</th><td>10.15</td><td>6.31</td><td>3.89</td><td>75.60</td><td>210.0</td><td>Higher</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <p><strong>Sources:</strong> fuel and prepared-food observations come from the KISoL city source ledger. Postal prices come from the <a href="https://www.dsc.bund.de/SharedDocs/Mediathek/Berichte/2025/BerichtBriefpreise2025_EN.pdf?__blob=publicationFile&amp;v=2">Federal Network Agency's 2025 letter-price comparison</a>. Haircut prices come from the <a href="https://www.schwarzkopf-professional.com/com/en/inspiration-education/education/hairdressing-comparison-europe.html">European Hair Cost Index 2026</a> and its <a href="https://datawrapper.dwcdn.net/ZTd4K/1/dataset.csv">published city dataset</a>. The service observations span January 2025 to January 2026, so this is a cross-sectional validation rather than a causal or same-day estimate.</p>
+          <p><strong>In conclusion:</strong> Taken together, production-cost theory, price-quality theory, international service-price research, and all three direct service tests support the same conclusion. KISoL uses fuel because it is a strong, quality-consistent proxy for local service prices. The relationship is directional rather than one-for-one, so the fuel weight remains an explicit index design choice rather than an estimated causal coefficient.</p>
+        </div>
+      </details>
+    </section>
+    <section class="formula-band" aria-labelledby="formula-heading">
+      <div class="content-width">
+        <div class="reading-width flush-left formula-intro">
+          <p class="section-kicker">Complete calculation</p>
+          <h2 id="formula-heading">The index formulas</h2>
+          <p>Each price is converted to a common currency and normalized against the sample median for the same item before the components are combined. Exact product identities and numerical weights remain in the audit workbook; the public formula shows the complete calculation structure.</p>
+          <p class="formula-note"><strong>Notation:</strong> <em>c</em> means the city being evaluated, and <em>x</em> means one specific basket item.</p>
+        </div>
+
+        <div class="formula-stack">
+          <div class="formula-block">
+            <p class="formula-label">Step 1 - raw income-adjusted city affordability</p>
+            <div class="expanded-formula" role="math" aria-label="Raw city affordability equals applicable net median monthly wage multiplied by the applicable prime-age employment coefficient, divided by the weighted city price basket">
+              <span class="formula-name">Raw City Affordability<sub>c</sub> =</span>
+              <span class="formula-fraction">
+                <span class="formula-numerator">Applicable Net Median Monthly Wage<sub>c</sub> &times; Applicable Prime-Age Employment Coefficient<sub>c</sub></span>
+                <span class="formula-denominator">Weighted City Price Basket<sub>c</sub></span>
+              </span>
+            </div>
+            <p class="formula-note">This is the affordability ratio before rebasing. European cities use the applicable national wage and employment coefficient; U.S. cities use the applicable state-adjusted wage and state employment coefficient.</p>
+          </div>
+
+          <div class="formula-block">
+            <p class="formula-label">Step 2 - rebased income-adjusted city affordability</p>
+            <div class="formula-row" role="math" aria-label="City affordability index equals one hundred times city raw affordability divided by median raw city affordability across sampled cities">
+              <span class="formula-name">City Affordability Index<sub>c</sub></span>
+              <span class="formula-equals">=</span>
+              <span class="formula-scale">100 &times;</span>
+              <span class="formula-fraction">
+                <span class="formula-numerator">Raw City Affordability<sub>c</sub></span>
+                <span class="formula-denominator">Median Raw City Affordability across all sampled cities</span>
+              </span>
+            </div>
+            <p class="formula-note">Higher values mean greater earning capacity relative to the standardized city basket. The sample median equals 100.</p>
+          </div>
+
+          <div class="formula-block">
+            <p class="formula-label">Basket-only city cost</p>
+            <div class="formula-row" role="math" aria-label="City basket cost index equals one hundred times city weighted price basket divided by the median weighted price basket across sampled cities">
+              <span class="formula-name">City Basket Cost Index<sub>c</sub></span>
+              <span class="formula-equals">=</span>
+              <span class="formula-scale">100 &times;</span>
+              <span class="formula-fraction">
+                <span class="formula-numerator">Weighted City Price Basket<sub>c</sub></span>
+                <span class="formula-denominator">Median Weighted City Price Basket across all sampled cities</span>
+              </span>
+            </div>
+            <p class="formula-note">Lower values mean a cheaper basket. Income and employment do not enter this index.</p>
+          </div>
+
+          <div class="formula-block">
+            <p class="formula-label">Expanded weighted city basket</p>
+            <div class="expanded-formula" role="math" aria-label="Weighted city price basket equals the weighted sum of fuel, housing, and standardized goods relative costs">
+              <span class="formula-name">Weighted City Price Basket<sub>c</sub> =</span>
+              <ul class="formula-terms">
+                <li><strong>Fuel Weight</strong> &times; Road Fuel Relative Price<sub>c</sub></li>
+                <li><strong>Housing Weight</strong> &times; [(Asking Rent Relative Price<sub>c</sub> + Asking Purchase Price Relative<sub>c</sub>) &divide; 2]</li>
+                <li><strong>Goods Weight</strong> &times; [(Food Relative Cost<sub>c</sub> + Used Standardized Car Relative Price<sub>c</sub> + New Standardized Car Relative Price<sub>c</sub> + Premium Smartphone Relative Price<sub>c</sub> + Prepared-Food Relative Price<sub>c</sub> + Standardized Footwear Relative Price<sub>c</sub>) &divide; Number of Goods Components]</li>
+              </ul>
+            </div>
+            <p class="formula-note">The three top-level weights sum to one. Food is itself an equal-weight average of the standardized animal-protein, staple-carbohydrate, vegetable, dairy, and egg price relatives.</p>
+          </div>
+
+          <div class="formula-block">
+            <p class="formula-label">Normalization and supporting variables</p>
+            <dl class="formula-definitions">
+              <div>
+                <dt>Relative Price of Item x in City c</dt>
+                <dd>Price of Item x in City c &divide; Median Price of Item x across all sampled cities.</dd>
+              </div>
+              <div>
+                <dt>Price in Common Currency</dt>
+                <dd>Price in Local Currency &divide; Local-Currency Units per Common-Currency Unit.</dd>
+              </div>
+              <div>
+                <dt>Road Fuel Price per Gallon</dt>
+                <dd>(Road Fuel Price in Local Currency per Litre &divide; Local-Currency Units per Common-Currency Unit) &times; Litres per Gallon.</dd>
+              </div>
+              <div>
+                <dt>Food Relative Cost<sub>c</sub></dt>
+                <dd>Arithmetic mean of the five standardized food-item relative prices in City c.</dd>
+              </div>
+              <div>
+                <dt>Applicable Net Median Monthly Wage<sub>c</sub></dt>
+                <dd>The national net-median wage assigned to a European city, or the state-adjusted net-median wage assigned to a U.S. city.</dd>
+              </div>
+              <div>
+                <dt>Applicable Prime-Age Employment Coefficient<sub>c</sub></dt>
+                <dd>The corresponding national or U.S. state prime-age employment rate expressed as a decimal.</dd>
+              </div>
+              <div>
+                <dt>Raw City Affordability<sub>c</sub></dt>
+                <dd>(Applicable Net Median Monthly Wage<sub>c</sub> &times; Applicable Prime-Age Employment Coefficient<sub>c</sub>) &divide; Weighted City Price Basket<sub>c</sub>.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-band" aria-labelledby="process-heading">
+      <div class="content-width">
+        <div class="reading-width flush-left">
+          <p class="section-kicker">Calculation</p>
+          <h2 id="process-heading">How the comparison is built</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <h3>Convert</h3>
+            <p>Every local-currency observation is converted to a common currency using the same market exchange-rate snapshot.</p>
+          </article>
+          <article>
+            <h3>Normalize</h3>
+            <p>Each individual price is divided by the median for that same item across the city sample.</p>
+          </article>
+          <article>
+            <h3>Combine</h3>
+            <p>Like-for-like prices are combined into food, standardized goods, housing, and fuel components using fixed weights.</p>
+          </article>
+          <article>
+            <h3>Rebase</h3>
+            <p>The resulting basket and affordability measures are rebased so the sample median is the common reference value of 100.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section reading-width" aria-labelledby="income-heading">
+      <p class="section-kicker">Income capacity</p>
+      <h2 id="income-heading">Why the affordability numerator uses broader labor markets</h2>
+      <p>European cities use the national net median monthly wage and national prime-age employment share. U.S. cities use a state-adjusted wage input and the corresponding state prime-age employment share. The same applicable labor capacity is assigned to sampled cities in the same country or U.S. state.</p>
+      <p>Comparable city wage medians and city prime-age employment rates are rarely available. Published city averages often mix different industries, omit commuters, disagree on city boundaries, and create a level of precision the underlying data cannot support.</p>
+    </section>
+
+    <section class="content-section content-width" aria-labelledby="sources-heading">
+      <div class="two-column-text">
+        <div>
+          <p class="section-kicker">Sources</p>
+          <h2 id="sources-heading">Direct sources first</h2>
+          <p>Inputs are anchored to official statistics, fuel-price publishers, local real-estate portals, supermarket or retailer pages, official product stores, and relevant vehicle marketplaces. Current direct observations are preferred; transformations, fallbacks, and modelled values are labelled in the source ledger.</p>
+          <p>No crowd-sourced cost-of-living aggregator, such as Numbeo.com, is used as a data source.</p>
+        </div>
+        <div>
+          <p class="section-kicker">Exclusions</p>
+          <h2>What is deliberately left out</h2>
+          <p>Healthcare and dentistry are excluded because subsidies, insurance structures, access rules, waiting times, and quality differences make sticker prices misleading across countries.</p>
+          <p>The index also does not attempt to represent visa rules, crime, education, childcare, climate, language, household size, personal savings, or individual consumption preferences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="content-width cta-inner">
+        <div>
+          <h2>Inspect the results and source ledgers</h2>
+          <p>The complete workbooks contain every input value, source URL, transformation, status, and limitation.</p>
+        </div>
+        <a class="button" href="mailto:magellanique@yahoo.com?subject=KISoL%20workbook%20request">Contact me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p><strong>KISoL - A Standard of Living Index by magellanique.com</strong> &middot; Snapshot dated July 2026</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Results</a>
+        <a href="index.html#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

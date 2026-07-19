@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare a net salary offer across KISoL city baskets and applicable wage benchmarks.">
+  <title>KISoL - A Standard of Living Index by magellanique.com - Calculator</title>
+  <link rel="stylesheet" href="styles.css?v=20260718-github-ready">
+  <script src="calculator.js?v=20260718-geography-calculator" defer></script>
+</head>
+<body class="theme-results theme-calculator">
+  <a class="skip-link" href="#main-content">Skip to calculator</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="KISoL - A Standard of Living Index by magellanique.com results">
+        <strong>KISoL</strong>
+        <span>A Standard of Living Index by magellanique.com</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Results</a>
+        <a href="index.html#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html" aria-current="page">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="offer-calculator-band" id="offer-calculator" aria-labelledby="offer-calculator-heading">
+      <div class="content-width">
+        <div class="section-heading calculator-heading">
+          <div>
+            <p class="section-kicker">Offer calculator</p>
+            <h1 id="offer-calculator-heading">What does this salary buy elsewhere?</h1>
+          </div>
+          <p class="section-note">Enter take-home monthly pay in USD. Compare city baskets or population-weighted country and U.S. state baskets against the applicable net-wage benchmarks.</p>
+        </div>
+
+        <div class="calculator-scope-switch">
+          <span id="calculator-scope-label">Comparison level</span>
+          <div class="segmented calculator-segmented" role="tablist" aria-labelledby="calculator-scope-label">
+            <button type="button" role="tab" data-calculator-scope="city" aria-selected="true">Cities</button>
+            <button type="button" role="tab" data-calculator-scope="geography" aria-selected="false">Countries / U.S. states</button>
+          </div>
+        </div>
+
+        <form class="offer-form" id="offer-calculator-form" data-scope="city">
+          <label for="offer-salary">
+            <span>Net monthly salary</span>
+            <span class="salary-input-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="offer-salary" name="salary" type="number" min="0" step="100" inputmode="decimal" value="5000" required>
+            </span>
+          </label>
+          <label id="offer-country-field" for="offer-country">
+            <span>Country</span>
+            <select id="offer-country" name="country" disabled>
+              <option>Loading countries...</option>
+            </select>
+          </label>
+          <label id="offer-city-field" for="offer-city">
+            <span>City</span>
+            <select id="offer-city" name="city" disabled>
+              <option>Loading cities...</option>
+            </select>
+          </label>
+          <label id="offer-geography-field" for="offer-geography" hidden>
+            <span>Country / U.S. state</span>
+            <select id="offer-geography" name="geography" disabled>
+              <option>Loading countries and states...</option>
+            </select>
+          </label>
+          <button class="button" id="offer-calculate" type="submit" disabled>Calculate</button>
+        </form>
+        <p class="calculator-method-note" id="calculator-method-note">The entered salary is treated as net. Equivalent salaries use city basket-price ratios only. Earnings percentiles are lognormal estimates from the applicable median and national earnings Gini; the employment-adjusted share is shown separately and is not applied to purchasing capacity.</p>
+
+        <div class="calculator-results" id="offer-calculator-results" hidden aria-live="polite">
+          <div class="calculator-result-heading">
+            <p class="section-kicker">Offer analysis</p>
+            <h2 id="offer-summary-title"></h2>
+          </div>
+
+          <div class="offer-summary-grid">
+            <div>
+              <span>Local wage position</span>
+              <strong id="offer-local-position"></strong>
+              <small id="offer-local-detail"></small>
+            </div>
+            <div>
+              <span>Estimated earnings percentile</span>
+              <strong id="offer-percentile-position"></strong>
+              <small id="offer-percentile-detail"></small>
+            </div>
+            <div>
+              <span id="offer-basket-label">City basket</span>
+              <strong id="offer-basket-position"></strong>
+              <small id="offer-basket-detail"></small>
+            </div>
+            <div>
+              <span id="offer-benchmark-label">Against all city benchmarks</span>
+              <strong id="offer-europe-position"></strong>
+              <small id="offer-europe-detail"></small>
+            </div>
+          </div>
+
+          <p class="offer-analysis" id="offer-analysis"></p>
+
+          <div class="country-equivalence-block" id="country-equivalence-block">
+            <div class="calculator-subheading">
+              <div>
+                <p class="section-kicker">Same-country comparison</p>
+                <h2 id="country-equivalence-heading"></h2>
+              </div>
+              <p>Equivalent pay preserves the purchasing capacity of the entered offer against the standardized basket.</p>
+            </div>
+            <div class="table-shell calculator-table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">City</th>
+                    <th scope="col">Equivalent net salary</th>
+                    <th scope="col">Estimated earnings position</th>
+                    <th scope="col">Basket difference</th>
+                  </tr>
+                </thead>
+                <tbody id="country-equivalence-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="europe-equivalence-block">
+            <div class="calculator-subheading equivalence-heading-row">
+              <div>
+                <p class="section-kicker" id="equivalence-kicker">All-city equivalents</p>
+                <h2>What the same purchasing capacity costs elsewhere</h2>
+              </div>
+              <label class="search-field calculator-search" for="equivalence-search">
+                <span id="equivalence-search-label">Find a city or country</span>
+                <input id="equivalence-search" type="search" autocomplete="off" placeholder="Search cities or countries">
+              </label>
+            </div>
+            <div class="table-shell calculator-table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col" id="equivalence-name-heading">City</th>
+                    <th scope="col" id="equivalence-parent-heading">Country</th>
+                    <th scope="col">Equivalent net salary</th>
+                    <th scope="col">Estimated earnings position</th>
+                    <th scope="col">Basket difference</th>
+                  </tr>
+                </thead>
+                <tbody id="equivalence-body"></tbody>
+              </table>
+            </div>
+            <div class="table-footer calculator-table-footer">
+              <p id="equivalence-status"></p>
+              <button class="button button-secondary" id="equivalence-show-all" type="button" hidden>Show all sampled cities</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p><strong>KISoL - A Standard of Living Index by magellanique.com</strong> &middot; Snapshot dated July 2026</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Results</a>
+        <a href="index.html#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html" aria-current="page">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

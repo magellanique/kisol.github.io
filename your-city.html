@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enter the standardized KISoL basket for your city in USD and compare its cost and affordability with the published city sample.">
+  <title>KISoL - A Standard of Living Index by magellanique.com - Your City</title>
+  <link rel="stylesheet" href="styles.css?v=20260718-github-ready">
+  <script src="your-city.js?v=20260718-your-city-9" defer></script>
+</head>
+<body class="theme-results theme-your-city">
+  <a class="skip-link" href="#main-content">Skip to your city</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="KISoL - A Standard of Living Index by magellanique.com results">
+        <strong>KISoL</strong>
+        <span>A Standard of Living Index by magellanique.com</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Results</a>
+        <a href="index.html#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="your-city.html" aria-current="page">Your City</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="your-city-band" aria-labelledby="your-city-heading">
+      <div class="content-width">
+        <div class="section-heading your-city-heading">
+          <div>
+            <p class="section-kicker">User-defined comparison</p>
+            <h1 id="your-city-heading">Place your city in KISoL</h1>
+          </div>
+          <p class="section-note">Enter every monetary value in USD. Use a local item that matches each generic specification as closely as possible; the exact KISoL brands and models remain undisclosed.</p>
+        </div>
+
+        <form id="your-city-form">
+          <div class="custom-profile-form">
+
+            <label for="custom-city-name">
+              <span>City name</span>
+              <input id="custom-city-name" type="text" autocomplete="address-level2" required placeholder="Your city">
+            </label>
+            <label for="custom-salary">
+              <span>Your net monthly salary</span>
+              <span class="custom-price-wrap"><span aria-hidden="true">$</span><input id="custom-salary" type="number" min="0.01" step="any" required></span>
+            </label>
+            <label for="custom-median-wage">
+              <span>Applicable net median wage</span>
+              <span class="custom-price-wrap"><span aria-hidden="true">$</span><input id="custom-median-wage" type="number" min="0.01" step="any" required></span>
+            </label>
+            <label for="custom-employment">
+              <span>Prime-age employment rate</span>
+              <span class="custom-percent-wrap"><input id="custom-employment" type="number" min="0.1" max="100" step="0.1" required><span aria-hidden="true">%</span></span>
+            </label>
+          </div>
+
+          <div class="custom-input-section">
+            <div class="custom-input-heading">
+              <div><h2>Road fuel</h2></div>
+              <p>Use the same commonly purchased grade and choose a price per litre or per U.S. gallon.</p>
+            </div>
+            <div class="table-shell custom-input-shell">
+              <table class="custom-input-table">
+                <thead><tr><th scope="col">Standardized observation</th><th scope="col">Unit</th><th scope="col">US Anchor - New York</th><th scope="col">European Anchor - Paris</th><th scope="col">Your city price, USD</th></tr></thead>
+                <tbody id="local-inputs"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="custom-input-section">
+            <div class="custom-input-heading">
+              <div><h2>New-entry housing</h2></div>
+              <p>Use current asking prices faced by a new entrant, measured per square metre.</p>
+            </div>
+            <div class="table-shell custom-input-shell">
+              <table class="custom-input-table">
+                <thead><tr><th scope="col">Standardized observation</th><th scope="col">Unit</th><th scope="col">US Anchor - New York</th><th scope="col">European Anchor - Paris</th><th scope="col">Your city price, USD</th></tr></thead>
+                <tbody id="housing-inputs"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="custom-input-section">
+            <div class="custom-input-heading">
+              <div><p class="section-kicker">Food component</p><h2>Standard food basket</h2></div>
+              <p>Use ordinary retail prices for the listed quantities.</p>
+            </div>
+            <div class="table-shell custom-input-shell">
+              <table class="custom-input-table">
+                <thead><tr><th scope="col">Standardized observation</th><th scope="col">Unit</th><th scope="col">US Anchor - New York</th><th scope="col">European Anchor - Paris</th><th scope="col">Your city price, USD</th></tr></thead>
+                <tbody id="everyday-inputs"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="custom-input-section">
+            <div class="custom-input-heading">
+              <div><p class="section-kicker">Goods component</p><h2>Standardized products and prepared food</h2></div>
+              <p>Use a locally available item matching each generic specification. Keep model year, trim, storage, portion, and shoe construction consistent.</p>
+            </div>
+            <div class="table-shell custom-input-shell">
+              <table class="custom-input-table">
+                <thead><tr><th scope="col">Standardized observation</th><th scope="col">Unit</th><th scope="col">US Anchor - New York</th><th scope="col">European Anchor - Paris</th><th scope="col">Your city price, USD</th></tr></thead>
+                <tbody id="comparable-inputs"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="custom-method-note">The corresponding KISoL sample medians are built into the calculator. Enter only the comparable city prices. User-entered results are exploratory and do not alter the published audited ranking.</p>
+          <button class="button custom-calculate" id="custom-calculate" type="submit" disabled>Calculate ranking</button>
+        </form>
+
+        <section class="custom-results" id="custom-results" hidden aria-live="polite" aria-labelledby="custom-results-heading">
+          <div class="calculator-result-heading">
+            <p class="section-kicker">Your result</p>
+            <h2 id="custom-results-heading"></h2>
+          </div>
+          <div class="offer-summary-grid custom-summary-grid">
+            <div><span>Basket cost index</span><strong id="custom-basket-index"></strong><small id="custom-basket-rank"></small></div>
+            <div><span>Affordability index</span><strong id="custom-affordability-index"></strong><small id="custom-affordability-rank"></small></div>
+            <div><span>Offer purchasing capacity</span><strong id="custom-offer-rank"></strong><small>Against existing city wage benchmarks</small></div>
+            <div><span>Income capacity</span><strong id="custom-income-capacity"></strong><small>Median wage multiplied by employment</small></div>
+          </div>
+          <p class="offer-analysis" id="custom-analysis"></p>
+
+          <div class="custom-breakdown">
+            <div class="calculator-subheading"><div><p class="section-kicker">Calculation</p><h2>Relative-price breakdown</h2></div><p>Each item is divided by the built-in KISoL sample median for the same observation.</p></div>
+            <div class="table-shell calculator-table-shell">
+              <table class="custom-breakdown-table"><thead><tr><th scope="col">Component</th><th scope="col">Relative index</th></tr></thead><tbody id="custom-breakdown-body"></tbody></table>
+            </div>
+          </div>
+
+          <div class="custom-equivalents">
+            <div class="calculator-subheading equivalence-heading-row">
+              <div><p class="section-kicker">Salary equivalents</p><h2>What the same purchasing capacity costs elsewhere</h2></div>
+              <label class="search-field calculator-search" for="custom-equivalence-search"><span>Find a city or country</span><input id="custom-equivalence-search" type="search" autocomplete="off" placeholder="Search cities or countries"></label>
+            </div>
+            <div class="table-shell calculator-table-shell"><table><thead><tr><th scope="col">City</th><th scope="col">Country</th><th scope="col">Equivalent net salary</th><th scope="col">Basket difference</th><th scope="col">Existing basket rank</th></tr></thead><tbody id="custom-equivalence-body"></tbody></table></div>
+            <div class="table-footer calculator-table-footer"><p id="custom-equivalence-status"></p><button class="button button-secondary" id="custom-show-all" type="button" hidden>Show all cities</button></div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p><strong>KISoL - A Standard of Living Index by magellanique.com</strong> &middot; Snapshot dated July 2026</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Results</a><a href="index.html#about-project">About</a><a href="methodology.html">Methodology</a><a href="faq.html">FAQ</a><a href="calculator.html">Calculator</a><a href="your-city.html" aria-current="page">Your City</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

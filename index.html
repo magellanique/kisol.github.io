@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KISoL city affordability and basket-cost results for Europe and the United States.">
+  <title>KISoL - A Standard of Living Index by magellanique.com - Results</title>
+  <link rel="stylesheet" href="styles.css?v=20260718-github-ready">
+  <script src="results.js?v=20260718-country-state-link-reverted" defer></script>
+</head>
+<body class="theme-results">
+  <a class="skip-link" href="#main-content">Skip to results</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="KISoL - A Standard of Living Index by magellanique.com results">
+        <strong>KISoL</strong>
+        <span>A Standard of Living Index by magellanique.com</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Results</a>
+        <a href="#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro results-intro">
+      <div class="content-width">
+        <p class="eyebrow">July 2026 snapshot &middot; Europe and the United States</p>
+        <h1>KISoL - A City-level Standard of Living Index by magellanique.com</h1>
+        <p class="lede">A more realistic way to compare purchasing power and affordability across countries and cities using a fully standardized international basket, rather than methodologically problematic PPP or nominal comparisons.</p>
+
+        <div class="audience-note">
+          <p><strong>Affordability:</strong> intended for a local resident or a new mover who expects to work on-site and earn locally. It compares the same standardized basket with the earning capacity applicable to that city (national-level for Europe and state-level for the United States).</p>
+          <p><strong>Basket cost:</strong> intended for someone who will not work locally and wants to compare living costs alone, such as a remote worker or a person bringing income from elsewhere. Local wages and employment are removed from this view.</p>
+        </div>
+
+        <div class="mode-bar">
+          <div class="segmented" role="tablist" aria-label="Result view">
+            <button type="button" role="tab" data-mode="affordability" aria-selected="true">Affordability</button>
+            <button type="button" role="tab" data-mode="basket" aria-selected="false">Basket cost</button>
+            <button type="button" role="tab" data-mode="geography" aria-selected="false">Country/state</button>
+          </div>
+          <p id="mode-explainer">Higher scores indicate greater affordability after national European or state-level U.S. income capacity is compared with local prices.</p>
+        </div>
+
+        <div class="metric-strip" aria-label="Dataset summary">
+          <div>
+            <span class="metric-label" id="sample-label">Cities</span>
+            <strong id="sample-size">98</strong>
+          </div>
+          <div>
+            <span class="metric-label">Reference</span>
+            <strong>Median = 100</strong>
+          </div>
+          <div>
+            <span class="metric-label">Rank direction</span>
+            <strong id="rank-direction">Higher is better</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-band" aria-labelledby="map-heading">
+      <div class="content-width">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Geographic view</p>
+            <h2 id="map-heading">Affordability ranks</h2>
+          </div>
+          <p class="section-note" id="map-note">The sample uses the two largest cities by population in each covered European country and the ten largest in the United States. The main view excludes European microstates; Luxembourg remains included.</p>
+        </div>
+        <div class="map-stack">
+          <figure class="result-map">
+            <h3>Europe</h3>
+            <img id="result-map-europe" src="assets/maps/KISoL_City_Affordability_Ranks_Europe_No_Microstates_US_State_Adjusted_Corrected.png" alt="Affordability rank map of European cities">
+            <figcaption id="map-caption-europe">Rank 1 has the greatest income-adjusted affordability. European cities use national labor inputs.</figcaption>
+          </figure>
+          <figure class="result-map">
+            <h3>United States</h3>
+            <img id="result-map-us" src="assets/maps/KISoL_City_Affordability_Ranks_United_States_No_Microstates_US_State_Adjusted_Corrected.png" alt="Affordability rank map of United States cities">
+            <figcaption id="map-caption-us">Rank 1 has the greatest income-adjusted affordability. U.S. cities use state-level labor inputs.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ranking-section content-width" aria-labelledby="ranking-heading">
+      <div class="section-heading ranking-heading-row">
+        <div>
+          <p class="section-kicker" id="table-kicker">City table</p>
+          <h2 id="ranking-heading">Affordability ranking</h2>
+        </div>
+        <label class="search-field" for="result-search">
+          <span id="search-label">Find a city or country</span>
+          <input id="result-search" type="search" autocomplete="off" placeholder="Search results">
+        </label>
+      </div>
+
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col" id="result-name-heading">City</th>
+              <th scope="col" id="result-parent-heading">Country</th>
+              <th scope="col" id="result-group-heading">Region</th>
+              <th scope="col" id="index-column-heading">Affordability index</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <p id="results-status" aria-live="polite">Loading rankings...</p>
+        <button id="show-all" class="button button-secondary" type="button" hidden>Show all cities</button>
+      </div>
+      <noscript><p class="notice">JavaScript is required for the searchable ranking. Contact the author for the complete workbooks.</p></noscript>
+    </section>
+
+    <section class="analysis-band" aria-labelledby="analysis-heading">
+      <div class="content-width">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">About the results</p>
+            <h2 id="analysis-heading">Price and affordability tell different stories</h2>
+          </div>
+        </div>
+        <div class="insight-grid">
+          <article>
+            <h3>Income can outweigh high prices</h3>
+            <p>Several high-income cities remain strong on affordability even though their baskets are among the most expensive. Their national or state-level wage capacity is large enough to offset much of the price disadvantage.</p>
+          </article>
+          <article>
+            <h3>The cheapest places were often the least affordable</h3>
+            <p>In this sample, cities with the least expensive baskets tended to sit near the bottom of the income-adjusted ranking. Lower prices did not compensate for lower applicable net earnings and weaker prime-age employment.</p>
+          </article>
+          <article>
+            <h3>Within-country differences mostly come from prices</h3>
+            <p>European cities in the same country share national income inputs. U.S. cities use state-level wage and prime-age employment inputs, so cities in the same state share those inputs. Remaining differences within each geography therefore come from city prices rather than a city-wage estimate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="limitations-section content-width" aria-labelledby="limitations-heading">
+      <div class="limitations-layout">
+        <div>
+          <p class="section-kicker">Data caution</p>
+          <h2 id="limitations-heading">Limitations</h2>
+        </div>
+        <div class="limitations-copy">
+          <p>U.S. labor inputs are measured at the state level. Each state's net median wage is estimated by adjusting the national U.S. net median in proportion to the state's average weekly wage relative to the national average, using BLS Quarterly Census of Employment and Wages data for the fourth quarter of 2025. State prime-age employment coefficients are direct BLS 2025 11-month provisional observations.</p>
+          <p>The U.S. state wage is therefore a transparent geographic estimate, not a directly published state net median. European inputs are labelled by evidence type as well as year. A calculated net value is never described as a directly observed median.</p>
+          <dl class="wage-vintages">
+            <div>
+              <dt>Direct net medians</dt>
+              <dd>Austria and France: latest official 2024 releases.</dd>
+            </div>
+            <div>
+              <dt>2025 official inputs</dt>
+              <dd>Cyprus and Iceland: official gross medians converted with statutory deductions. Netherlands: provisional proxy from official sex-specific net hourly medians.</dd>
+            </div>
+            <div>
+              <dt>2024 official inputs</dt>
+              <dd>Italy: official net-at-median calculation. Ireland and Switzerland: official gross medians converted with documented tax models.</dd>
+            </div>
+            <div>
+              <dt>Older structural bases</dt>
+              <dd>Belgium and Luxembourg: official 2022 gross medians bridged to 2025 with OECD wage growth, then converted to net. These remain the weakest estimates in this audited group.</dd>
+            </div>
+          </dl>
+          <p class="limitations-note">The source ledger records the exact source, population, calculation, evidence class, and caveat for every updated wage. Across the wider sample, other modelled wage inputs remain clearly labelled and should not be read as direct national net medians. New official releases will replace estimates when comparable hard data becomes available.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section content-width" id="about-project" aria-labelledby="about-heading">
+      <div class="about-layout">
+        <div>
+          <p class="section-kicker">About the project</p>
+          <h2 id="about-heading">Why I built KISoL</h2>
+        </div>
+        <div class="about-copy">
+          <p>I created KISoL (Kocyigit's Index of Standard of Living) to compare affordability and purchasing power across cities and countries more directly. Common headline measures answer related but different questions.</p>
+          <ul class="about-method-list">
+            <li><strong>Nominal GDP per capita.</strong> It is useful (and, in fact, highly correlated with this index), but it measures production rather than the goods and services households can actually afford. Exchange-rate manipulation, foreign-owned or inflated output, cross-border workers, inequality, and concentrated resource income can widen that gap, as seen in <a href="https://www.cso.ie/en/interactivezone/statisticsexplained/nationalaccountsexplained/modifiedgni/">Ireland</a>, <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250327-2">Luxembourg</a>, <a href="https://www.worldbank.org/en/news/press-release/2023/11/24/investments-and-policy-reforms-towards-low-carbon-transition-and-resilience-are-in-azerbaijan-s-economic-interest-says-w">Azerbaijan</a>, and <a href="https://www.worldbank.org/ext/en/country/guyana">Guyana</a>.</li>
+            <li><strong><a href="https://www.worldbank.org/en/programs/icp/brief/ra13">PPP GDP per capita.</a></strong> It replaces market-exchange-rate conversion with a broad national price basket. Differences in product quality, consumption weights, housing, government services, taxes, subsidized basket items, and extrapolation from benchmark years remain difficult to handle consistently, particularly where relative prices change rapidly or price changes are underreported. These weaknesses are especially relevant when comparing economies with rapidly changing prices or substantially different product ranges, such as <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=TR">Turkey</a>, <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=RU">Russia</a>, <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=CN">China</a>, <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=IN">India</a>, and <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=EG">Egypt</a>.</li>
+            <li><strong>Median income.</strong> It is conditional on having a job: wage floors (such as a minimum wage that is high relative to median income) and selective employment can lift the observed median while many people remain outside employment, a concern in countries such as <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260417-1">Italy and Greece</a>, and <a href="https://www.statssa.gov.za/publications/P0211/Presentation%20QLFS%20Q4%202025.pdf">South Africa</a>. It also conceals inequality: two countries can report the same median while differing sharply in wage dispersion, lower-tail earnings, and the concentration of income above the midpoint.</li>
+            <li><strong>Rent-to-income and house-price-to-income ratios.</strong> They omit much of the household budget and are affected by financing costs, property taxes, rent controls, incumbent contracts, dwelling quality, size, and location.</li>
+            <li><strong><a href="https://hdr.undp.org/content/human-development-index-what-it-and-what-it-not">HDI.</a></strong> It compresses life expectancy, years of schooling, and PPP-based GNI per capita into a single geometric mean. That structure embeds judgments about dimensions, weights, cutoffs, and the logarithmic compression of income; it also measures years of life and schooling more readily than the quality of healthcare or education. National averages conceal differences in distribution, region, and access, and countries can reach similar scores through very different combinations of outcomes. The mismatch runs in both directions: in <a href="https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Statistical_Annex_HDI_Table.pdf#page=2">UNDP's 2025 table</a>, Cuba's and Jordan's HDI positions are respectively 30 and 22 places better than their GNI-per-capita positions, while Equatorial Guinea's HDI position is 24 places worse than its income position.</li>
+            <li><strong><a href="https://www.oecd.org/en/publications/oecd-guidelines-on-measuring-subjective-well-being-2025-update_9203632a-en/full-report/measuring-subjective-well-being_b4b53f27.html">Happiness indexes.</a></strong> They add cultural response patterns, expectations, question wording, and survey design to the comparison.</li>
+          </ul>
+          <p>KISoL addresses these problems by asking a narrower and more concrete question. <strong>KISoL prices the same standardized basket in every city, uses current market-entry housing costs, and compares that basket with net median earnings adjusted for prime-age employment.</strong> Categories that cannot be held reasonably consistent are excluded instead of being treated as equivalent. The city ranking measures the material purchasing capacity of a locally employed resident or newcomer, while the basket-only ranking isolates living costs for someone whose income comes from elsewhere. <strong>KISoL is not a complete measure of welfare (as no such measure could technically be complete), but it provides a more direct, consistent, methodologically sound, and auditable measure of material living standards than any one of the headline indicators above.</strong></p>
+          <p>This first edition is a cross-sectional snapshot for 2026, prepared in July using the most recent available data. My intention is to repeat the research every year using the same core definitions, transparent source records, and comparable market-entry prices.</p>
+          <p class="about-commitment">As annual editions accumulate, KISoL can become a time series. That will make it possible to compare each city with its own earlier observations, measure how its basket cost and affordability change, and separate year-to-year movement from a one-time ranking position.</p>
+          <p>Each edition will retain its observation date, source ledger, city sample, and methodology version so that future comparisons remain interpretable when sources, products, or coverage must change.</p>
+          <h3>About the author</h3>
+          <p>I am Recep Kocyigit, a graduate student and macroeconomic analyst based in Brno. I am the researcher behind KISoL. I am also the creator of ESOEP Club, <a href="https://www.magellanique.com/magellanique-monetary-policy-game">the Magellanique Monetary Policy Game</a>, <a href="https://magellanique.com/">magellanique.com</a>, and many other projects. My interests include economics, prices, labor markets, game design, writing research, and building transparent measures that readers can inspect rather than merely trust :)</p>
+          <p>If you liked my work, you can connect with me on <a href="https://www.linkedin.com/in/recep-kocyigit/" rel="me">LinkedIn</a> or email me at <a href="mailto:530618@mail.muni.cz">530618@mail.muni.cz</a> :)</p>
+          <div class="about-support">
+            <h3>Help build the project</h3>
+            <p>If you would like to help with KISoL, please get in touch. Specific, auditable data for previous years would be especially valuable because it can help extend the project backwards and build a longer city-level time series.</p>
+            <p class="about-links">
+              <a href="mailto:magellanique@yahoo.com?subject=KISoL%20project%20contribution">magellanique@yahoo.com</a>
+              <a href="https://www.linkedin.com/in/recep-kocyigit/" rel="me">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="downloads-section content-width" aria-labelledby="downloads-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Audit and research access</p>
+          <h2 id="downloads-heading">Request the complete workbooks</h2>
+        </div>
+        <p class="section-note">The workbooks include source ledgers, transformations, and limitations. They are supplied by email on request.</p>
+      </div>
+      <div class="download-list">
+        <div class="download-row">
+          <div>
+            <strong>Affordability index &middot; no microstates</strong>
+            <span>Main website sample with income, employment, and the price basket.</span>
+          </div>
+          <a class="button" href="mailto:magellanique@yahoo.com?subject=KISoL%20affordability%20workbook%20request">Contact me</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <strong>Basket cost index &middot; no microstates</strong>
+            <span>Price-only comparison with income and employment removed.</span>
+          </div>
+          <a class="button" href="mailto:magellanique@yahoo.com?subject=KISoL%20basket-cost%20workbook%20request">Contact me</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <strong>Country and state affordability index</strong>
+            <span>Population-weighted country and U.S. state results, with clean and full audit versions.</span>
+          </div>
+          <a class="button" href="mailto:magellanique@yahoo.com?subject=KISoL%20country-state%20workbook%20request">Contact me</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <strong>Affordability index &middot; full sample</strong>
+            <span>Alternate workbook retaining the European microstates.</span>
+          </div>
+          <a class="button button-secondary" href="mailto:magellanique@yahoo.com?subject=KISoL%20full-sample%20workbook%20request">Contact me</a>
+        </div>
+      </div>
+      <p class="contact-line">Data requests: <a href="mailto:magellanique@yahoo.com">magellanique@yahoo.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p><strong>KISoL - A Standard of Living Index by magellanique.com</strong> &middot; Snapshot dated July 2026</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Results</a>
+        <a href="#about-project">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="faq.html">FAQ</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="your-city.html">Your City</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

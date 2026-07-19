@@ -1,0 +1,20 @@
+# Research workbooks and tabular exports
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.ods
+*.csv
+*.tsv
+~$*
+
+# Local and operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+
+# Editor folders
+.vscode/
+.idea/
